@@ -4,7 +4,6 @@ import org.javaRoad.Lesson16_AbstractClassesInterfaces.gemini.task2.base.GameCha
 import org.javaRoad.Lesson16_AbstractClassesInterfaces.gemini.task2.game_classes.Dragon;
 import org.javaRoad.Lesson16_AbstractClassesInterfaces.gemini.task2.game_classes.MageCharacter;
 import org.javaRoad.Lesson16_AbstractClassesInterfaces.gemini.task2.game_classes.Warrior;
-import org.javaRoad.Lesson16_AbstractClassesInterfaces.gemini.task2.impl.Mage;
 
 import java.util.ArrayList;
 import java.util.List;
