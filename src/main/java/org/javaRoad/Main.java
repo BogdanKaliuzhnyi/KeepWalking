@@ -23,4 +23,6 @@ public class Main {
         c[2] = 'C';
         System.out.println(name.length());
     }
+
+    void smth() throws NullPointerException {}
 }
