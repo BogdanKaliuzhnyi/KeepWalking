@@ -33,7 +33,7 @@ public class Main {
         int found = 0;
 
         for (int i = 0; i < carArray.length; i++) {
-            if (carArray[i].equals(wanted)) {
+            if (carArray[i].hashCode() == wanted.hashCode() && carArray[i].equals(wanted)) {
                 System.out.println("Внимание!!!\nНайден автомобиль по ориентировке:");
                 System.out.println("Car #" + (i + 1) + ": " + carArray[i].toString());
                 found++;

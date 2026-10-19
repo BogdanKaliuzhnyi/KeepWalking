@@ -35,6 +35,7 @@ public class Car {
         return yearOfManufacture;
     }
 
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Color: ").append(color).append("\n");
