@@ -28,9 +28,6 @@ public class AnimalArrayCreator {
                     break;
                 case 4:
                     animals[i] = null;
-                    break;
-                default:
-                    System.out.println("Что то пошло не так");
             }
         }
         return animals;

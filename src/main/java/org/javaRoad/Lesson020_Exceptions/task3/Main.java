@@ -18,7 +18,7 @@ public class Main {
         Animal[] animals = AnimalArrayCreator.fillAnimalArray(5);
 
         try {
-            ArrayDataValidator.isValidArray(animals);
+            ArrayDataValidator.validateArray(animals);
             soundAll_instanceof(animals);
         } catch (ArrayValidationException e) {
             System.out.println(e.getMessage());
@@ -31,9 +31,7 @@ public class Main {
 
     private static void soundAll_instanceof(Animal[] animals) {
         for (Animal animal : animals) {
-            if (animal != null) {
                 sound_instanceof(animal);
-            }
         }
     }
 

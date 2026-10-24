@@ -4,7 +4,7 @@ import org.javaRoad.Lesson020_Exceptions.task3.exception.ArrayValidationExceptio
 import org.javaRoad.Lesson020_Exceptions.task3.model.Animal;
 
 public class ArrayDataValidator  {
-    public static void isValidArray(Animal[] array) throws ArrayValidationException {
+    public static void validateArray(Animal[] array) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
