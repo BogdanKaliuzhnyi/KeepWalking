@@ -31,7 +31,7 @@ public class FindCar {
             if (carArray[i].identifier.hashCode() == wanted.identifier.hashCode()
                     && carArray[i].identifier.equals(wanted.identifier)) {
                 System.out.println("Внимание!!!\nНайден автомобиль по ориентировке:");
-                System.out.println("Car #" + (i + 1) + ": " + carArray[i].toString());
+                System.out.println("Car #" + (i + 1) + ": " + carArray[i]);
                 found++;
             }
         }
