@@ -28,11 +28,11 @@ public class Main {
         Figures shape = new Figures(length);
 
         if (type == 1) {
-            return shape.new Square().createShapeString();
+            return shape.getSquareShape();
         }
 
         if (type == 2) {
-            return shape.new Triangle().createShapeString();
+            return shape.getTriangleShape();
         }
 
         return "Incorrect input.";

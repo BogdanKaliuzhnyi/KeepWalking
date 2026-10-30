@@ -14,12 +14,20 @@ public class Figures {
         this.length = length;
     }
 
+    public String getTriangleShape() {
+        return new Triangle().createShapeString();
+    }
+
+    public String getSquareShape() {
+        return new Square().createShapeString();
+    }
+
     public class Triangle {
         static final String TRIANGLE_LEFT_SIDE_ELEMENT = "/";
         static final String TRIANGLE_RIGHT_SIDE_ELEMENT = "\\";
         static final String TRIANGLE_HORIZONTAL_SIDE_ELEMENT = "--";
 
-        public String createShapeString() {
+        private String createShapeString() {
 
             String triangle = "";
             for (int i = 0; i < length; i++) {
@@ -50,7 +58,7 @@ public class Figures {
         static final String SQUARE_VERTICAL_ELEMENT = "|";
         static final String SQUARE_HORIZONTAL_SIDE_ELEMENT = "---";
 
-        public String createShapeString() {
+        private String createShapeString() {
             String horizontalLine = createHorizontalLine(length);
             String verticalLines = createVerticalLines(length);
 

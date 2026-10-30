@@ -1,6 +1,6 @@
 package org.javaRoad.lesson025_inner_classes.task1.variant3_static_inner_classes.model;
 
-public class Figure {
+public final class Figure {
     private static final char NEW_LINE_SYMBOL = '\n';
     private static final String SINGLE_SPACE_ELEMENT = " ";
     private static final String TRIPLE_SPACE_ELEMENT = "   ";

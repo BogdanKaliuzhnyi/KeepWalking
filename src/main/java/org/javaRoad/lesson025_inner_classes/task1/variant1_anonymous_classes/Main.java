@@ -19,8 +19,12 @@ public class Main {
 
         System.out.print("Enter shape's type:\n 1: Square\n 2: Triangle\n");
         int shapeType = scanner.nextInt();
-
         scanner.close();
+
+        if (shapeType != 1 && shapeType != 2 || length < 1) {
+            System.out.println("Invalid input!");
+            return;
+        }
 
         System.out.println(createShapeString(length, shapeType));
     }
@@ -57,27 +61,23 @@ public class Main {
             return square.drawShape();
         }
 
-        if (type == 2) {
-            Figure triangle = new Figure(length) {
-                @Override
-                public String drawShape() {
-                    StringBuilder sb = new StringBuilder();
-                    for (int i = 0; i < getLength(); i++) {
-                        sb.append(SINGLE_SPACE_ELEMENT.repeat(getLength() - i));
-                        sb.append(TRIANGLE_LEFT_SIDE_ELEMENT);
-                        sb.append(SINGLE_SPACE_ELEMENT.repeat(Math.max(0, i * 2)));
-                        sb.append(TRIANGLE_RIGHT_SIDE_ELEMENT).append(NEW_LINE_SYMBOL);
-                    }
-
-                    sb.append(SINGLE_SPACE_ELEMENT);
-                    sb.append(TRIANGLE_HORIZONTAL_SIDE_ELEMENT.repeat(Math.max(0, getLength())));
-
-                    return sb.toString();
+        Figure triangle = new Figure(length) {
+            @Override
+            public String drawShape() {
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < getLength(); i++) {
+                    sb.append(SINGLE_SPACE_ELEMENT.repeat(getLength() - i));
+                    sb.append(TRIANGLE_LEFT_SIDE_ELEMENT);
+                    sb.append(SINGLE_SPACE_ELEMENT.repeat(Math.max(0, i * 2)));
+                    sb.append(TRIANGLE_RIGHT_SIDE_ELEMENT).append(NEW_LINE_SYMBOL);
                 }
-            };
-            return triangle.drawShape();
-        }
 
-        return "Incorrect input.";
+                sb.append(SINGLE_SPACE_ELEMENT);
+                sb.append(TRIANGLE_HORIZONTAL_SIDE_ELEMENT.repeat(Math.max(0, getLength())));
+
+                return sb.toString();
+            }
+        };
+        return triangle.drawShape();
     }
 }

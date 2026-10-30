@@ -18,16 +18,17 @@ public class Main {
 
         System.out.print("Enter shape's type:\n 1: Square\n 2: Triangle\n");
         int shapeType = scanner.nextInt();
-
         scanner.close();
+
+        if (length < 1 || shapeType != 1 && shapeType != 2) {
+            System.out.println("Invalid input!");
+            return;
+        }
 
         System.out.println(createShapeString(length, shapeType));
     }
 
     private static String createShapeString(int length, int type) {
-        if (length < 1 || type != 1 && type != 2) {
-            return "Incorrect input.";
-        }
         if (type == 1) {
             return Figure.Square.createShapeString(length);
         }
