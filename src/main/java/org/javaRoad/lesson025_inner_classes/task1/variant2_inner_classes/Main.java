@@ -1,6 +1,6 @@
 package org.javaRoad.lesson025_inner_classes.task1.variant2_inner_classes;
 
-import org.javaRoad.lesson025_inner_classes.task1.variant2_inner_classes.model.Figures;
+import org.javaRoad.lesson025_inner_classes.task1.variant2_inner_classes.model.Figure;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class Main {
     }
 
     private static String createShapeString(int length, int type) {
-        Figures shape = new Figures(length);
+        Figure shape = new Figure(length);
 
         if (type == 1) {
             return shape.getSquareShape();

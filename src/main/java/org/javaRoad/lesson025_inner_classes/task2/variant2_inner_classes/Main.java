@@ -1,0 +1,61 @@
+package org.javaRoad.lesson025_inner_classes.task2.variant2_inner_classes;
+
+import org.javaRoad.lesson025_inner_classes.task2.variant2_inner_classes.model.Animal;
+
+import java.util.Random;
+
+public class Main {
+    private static final Random random = new Random();
+
+    public static void main(String[] args) {
+        Animal[] animals = fillAnimalArray(new Animal[5]);
+        soundAll(animals);
+    }
+
+    private static Animal[] fillAnimalArray(Animal[] animals) {
+        Main pet = new Main();
+        for (int i = 0; i < animals.length; i++) {
+            switch (random.nextInt(3)) {
+                case 0:
+                    animals[i] = pet.new Cat();
+                    break;
+                case 1:
+                    animals[i] = pet.new Cow();
+                    break;
+                case 2:
+                    animals[i] = pet.new Dog();
+                    break;
+                default:
+                    System.out.println("Что то пошло не так");
+            }
+        }
+        return animals;
+    }
+
+    private static void soundAll(Animal[] animals) {
+        for (Animal animal : animals) {
+            animal.sound();
+        }
+    }
+
+    private class Cat extends Animal {
+        @Override
+        public void sound() {
+            System.out.println("Meow");
+        }
+    }
+
+    private class Cow extends Animal {
+        @Override
+        public void sound() {
+            System.out.println("Moo");
+        }
+    }
+
+    private class Dog extends Animal {
+        @Override
+        public void sound() {
+            System.out.println("Bark");
+        }
+    }
+}

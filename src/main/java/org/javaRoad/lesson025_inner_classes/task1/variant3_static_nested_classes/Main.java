@@ -1,6 +1,6 @@
-package org.javaRoad.lesson025_inner_classes.task1.variant3_static_inner_classes;
+package org.javaRoad.lesson025_inner_classes.task1.variant3_static_nested_classes;
 
-import org.javaRoad.lesson025_inner_classes.task1.variant3_static_inner_classes.model.Figure;
+import org.javaRoad.lesson025_inner_classes.task1.variant3_static_nested_classes.model.Figure;
 
 import java.util.Scanner;
 

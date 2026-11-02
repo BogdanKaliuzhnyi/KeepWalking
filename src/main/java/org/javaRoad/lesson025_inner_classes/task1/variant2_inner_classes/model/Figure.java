@@ -1,13 +1,13 @@
 package org.javaRoad.lesson025_inner_classes.task1.variant2_inner_classes.model;
 
-public class Figures {
+public class Figure {
     static final char NEW_LINE_SYMBOL = '\n';
     static final String SINGLE_SPACE_ELEMENT = " ";
     static final String TRIPLE_SPACE_ELEMENT = "   ";
 
     private final int length;
 
-    public Figures(int length) {
+    public Figure(int length) {
         if (length < 1) {
             throw new IllegalArgumentException("Length must be greater than 0");
         }

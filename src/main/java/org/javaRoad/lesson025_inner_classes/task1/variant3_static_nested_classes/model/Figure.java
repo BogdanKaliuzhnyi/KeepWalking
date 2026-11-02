@@ -1,4 +1,4 @@
-package org.javaRoad.lesson025_inner_classes.task1.variant3_static_inner_classes.model;
+package org.javaRoad.lesson025_inner_classes.task1.variant3_static_nested_classes.model;
 
 public final class Figure {
     private static final char NEW_LINE_SYMBOL = '\n';
