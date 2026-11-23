@@ -28,13 +28,12 @@ public class Main {
         System.out.println("\n5. Еще раз весь стек:\n" + stack.toStringAsArray());
     }
 
-    private static void tryToFind(Stack<String> stack, String s) {
+    private static <T> void tryToFind(Stack<T> stack, T t) {
         try {
-            stack.hasValue(s);
-            System.out.println("Значение \"" + s + "\" содержится в стеке");
+            stack.hasValue(t);
+            System.out.println("Значение \"" + t + "\" содержится в стеке");
         } catch (FindingNodeException e) {
             System.out.println(e.getMessage());
         }
     }
 }
-
